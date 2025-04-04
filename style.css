@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+video{
+    background-position: center;
+    width: 100%;
+    height: 160vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    z-index: -2; 
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+   margin-top: 30px;
+    align-items: center;
+   
+}
+
+.container h2{
+    font-family: "montserrat";
+    margin: 30px;
+    font-size: 24px;
+    color: #fff;
+}
+form{
+    position: relative;
+}
+form input{
+    width: 658px;
+    border-radius: 20px;
+    background-color: #0118D8;
+    height: 34px;
+    padding: 10px;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+form input::placeholder{
+    color: #fff;
+    font-weight: bold;
+}
+form button{
+    padding: 9px 20px;
+    margin: 0;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f4eaea;
+    color: #0118D8;
+    position: absolute;
+    right: 0%;
+    font-weight: bold;
+}
+.cityinfo{
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr); */
+}
+.city{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    width: 50% !important;
+
+}
+.Weather{
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 1;
+    width: 100% !important;
+    margin-left: 25px !important;
+}
+.cityname{
+    width: 234px;
+    align-items: flex-start;
+    border-radius: 10px;
+    background-color: #0118D8;
+    color: #fff;
+    font-family: "montserrat";
+    font-weight: 500;
+    padding: 15px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+font-size: 1.3rem;
+margin-top: 50px;
+margin-left: 10px;
+transform: translateY(0%);
+
+}
+
+.weather-icon,.wind-icon,.main-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-icon #weather,.wind-icon span,.main-icon span{
+    font-size: 30px;
+    font-weight: 600;
+}
+.Weather span{
+    font-size: 16px;
+}
+.wind-icon span,.main-icon span{
+    font-size: 40px;
+}
+
+.Weather{
+    animation: 1s anim  ease-in;
+}
+.wind{
+    animation: 1s anim  ease-in;
+}
+
+#morning{
+    transform: scaleX(1);
+    animation: mor 5s ease-in-out infinite;
+    color: fuchsia;
+}
+#design{
+    color: fuchsia;
+    font-weight: bold;
+}
+.h{
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.8) ;
+    position: absolute;
+    top: 0;
+    height: 160vh;
+    width: 100%;
+}
+@keyframes mor{
+    100%{
+        transform: scaleX(0.9);
+    }
+}
+
+
+@keyframes anim{
+    0%{
+        transform: translateY(0%);
+    }10%{
+        transform: translateY(1%);
+    }70%{
+        transform: translateX(1%);
+    }
+}
+
+@media (max-width:900px){
+    .city{
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        width: 50% !important;
+    
+    }
+    .Weather{
+        grid-column: 1 / span 2;
+        width: 100%;
+        margin: 0px !important;
+    }
+    .Main{
+        grid-column: 1 / span 2;
+        
+    }
+    .wind{
+        grid-column: 1 / span 2;
+        
+    }
+    .Coord{
+        grid-column: 1 / span 2;
+        
+    }
+    .cityname{
+        width: 100%;
+        margin: 0px !important;
+        margin: 10px !important;
+    }
+    .cityinfo{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        padding: 20px;
+    }
+    form{
+        width: 100%;
+    }
+    form input{
+        width: 100%;
+    }
+}

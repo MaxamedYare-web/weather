@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Searching Weather By city Name</h2>
+
+      <form>
+        <input
+          id="cityNameInput"
+          type="text"
+          placeholder="Write City Name..."
+        />
+        <button>Submit</button>
+      </form>
+      <h2 id="morning"></h2>
+      <div class="cityinfo">
+        <div class="cityname city">
+          <span id="cityname"></span>
+          <span id="today"></span>
+          <span id="date"></span>
+          <span id="time"></span>
+        </div>
+        <div class="cityname Weather">
+          <div class="weather-icon">
+            <img src="./assets/weather.svg" alt="" />
+            <span id="weather"> Weather</span>
+          </div>
+          <span id="desc"></span>
+          <span id="main"></span>
+          <span id="country"></span>
+        </div>
+        <div class="cityname Coord">
+          <span id="Coord">Coord</span>
+          <span id="lat">lat: 2.0371</span>
+          <span id="lon">lon: 45.343</span>
+        </div>
+        <div class="cityname wind">
+          <div class="wind-icon">
+            <img src="./assets/rainy-3.svg" alt="" />
+            <span id="wind">Wind</span>
+          </div>
+          <span id="deg">deg: 114</span>
+          <span id="gust"> gust: 4.43</span>
+          <span id="spead"> speed: 4.55</span>
+        </div>
+        <div class="cityname Main">
+          <div class="main-icon">
+            <img src="./assets/thunder.svg" alt="" />
+            <span id="main">main</span>
+          </div>
+
+          <span id="temp">temp: 303.02</span>
+          <span id="hum">humidity: 65%</span>
+          <span id="feel">Feel like: 306.75</span>
+        </div>
+      </div>
+    </div>
+    <div class="video">
+        <video  muted autoplay loop>
+            <source src="./assets/bg.mp4">
+        </video>
+    </div>
+<div class="h"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+<!-- {coord: {…}, weather: Array(1), base: 'stations', main: {…}, visibility: 10000,
+…} base : "stations" clouds : {all: 33} cod : 200 coord : {lon: 45.3438, lat:
+2.0371} dt : 1743667300 id : 53654 main : feels_like : 306.75 grnd_level : 1010
+humidity : 65 pressure : 1011 sea_level : 1011 temp : 303.02 temp_max : 303.02
+temp_min : 303.02 [[Prototype]] : Object name : "Mogadishu" sys : country : "SO"
+sunrise : 1743649058 sunset : 1743692750 [[Prototype]] : Object timezone : 10800
+visibility : 10000 weather : Array(1) 0 : description : "scattered clouds" icon
+: "03d" id : 802 main : "Clouds" [[Prototype]] : Object length : 1 [[Prototype]]
+: Array(0) wind : deg : 114 gust : 4.43 speed : 4.55 -->
